@@ -37,15 +37,15 @@ jobs:
 
       - run: ls
 
-      - name: Commit and push files 
-        run: |
-          git config --global user.email "octocat@github.com"
-          git config --global user.name "Github Actions"
-          git init
-          git remote add origin https://fizal619:${{ secrets.GITHUB_TOKEN }}@github.com/fizal619/cat-app.git
-          git checkout -b pages
-          git add . 
-          git commit -m "Deploying 🚀"
-          git push origin pages -f
+      # - name: Commit and push files 
+      #   run: |
+      #     git config --global user.email "octocat@github.com"
+      #     git config --global user.name "Github Actions"
+      #     git init
+      #     git remote add origin https://fizal619:${{ secrets.GITHUB_TOKEN }}@github.com/fizal619/cat-app.git
+      #     git checkout -b pages
+      #     git add . 
+      #     git commit -m "Deploying 🚀"
+      #     git push origin pages -f
 
 
