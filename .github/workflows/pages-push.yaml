@@ -15,7 +15,10 @@ jobs:
         with:
           files: static index.html
 
-      - name: Check Files 
-        run: ls -la 
+      - name: Commit and push files 
+        run: |
+          git add . 
+          git commit -m "Deploying 🚀"
+          git push origin pages -f
 
 
