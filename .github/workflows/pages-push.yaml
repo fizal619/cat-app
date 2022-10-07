@@ -22,6 +22,14 @@ jobs:
       - name: show files 
         run: echo "${{ steps.static_files.outputs.filenames }}"
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      
+      - run: npm i -S create-react-app
+
+      - run: ls
+
       - name: Commit and push files 
         run: |
           git config --global user.email "octocat@github.com"
