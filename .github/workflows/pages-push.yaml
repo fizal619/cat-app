@@ -17,7 +17,7 @@ jobs:
 
       - name: static files 
         id: static_files
-        run: echo "::set-output name=filenames::$(ls static)"
+        run: echo "::set-output name=filenames::$(ls  | tr '\n' ' ')"
 
       - name: show files 
         run: echo "${{ steps.static_files.outputs.filenames }}"
