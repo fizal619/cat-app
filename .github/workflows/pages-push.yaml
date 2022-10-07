@@ -17,6 +17,8 @@ jobs:
 
       - name: Commit and push files 
         run: |
+          git init
+          git checkout -b pages
           git add . 
           git commit -m "Deploying 🚀"
           git push origin pages -f
