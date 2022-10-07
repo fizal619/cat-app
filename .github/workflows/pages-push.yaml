@@ -15,6 +15,13 @@ jobs:
         with:
           files: static index.html
 
+      - name: static files 
+        id: static_files
+        run: echo "::set-output name=filenames::$(ls static)"
+
+      - name: show files 
+        run: echo "${{ steps.static_files.outputs.filenames }}"
+
       - name: Commit and push files 
         run: |
           git config --global user.email "octocat@github.com"
