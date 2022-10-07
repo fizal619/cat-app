@@ -17,6 +17,8 @@ jobs:
 
       - name: Commit and push files 
         run: |
+          git config --global user.email "octocat@github.com"
+          git config --global user.name "Github Actions"
           git init
           git checkout -b pages
           git add . 
