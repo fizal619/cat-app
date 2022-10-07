@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 16
       
-      - run: npm i -S create-react-app concurrently express dotenv react react-dom jest puppeteer
+      - run: npm i -S create-react-app concurrently express dotenv react react-dom jest puppeteer discord.js
 
       - run: ls
 
