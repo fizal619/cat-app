@@ -20,7 +20,7 @@ jobs:
           git config --global user.email "octocat@github.com"
           git config --global user.name "Github Actions"
           git init
-          git remote add origin https://fizal619:${{ secrets.GITHUB_TOKEN }}@github.com/fizal619/gambito.git
+          git remote add origin https://fizal619:${{ secrets.PAT }}@github.com/fizal619/gambito.git
           git checkout -b pages
           git add . 
           git commit -m "Deploying 🚀"
