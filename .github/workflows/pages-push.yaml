@@ -1,0 +1,21 @@
+name: Hello World
+
+on: 
+  workflow_dispatch:
+  push: 
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout files
+        uses: Bhacaz/checkout-files@v2
+        with:
+          files: static index.html
+
+      - name: Check Files 
+        run: ls -la 
+
+
